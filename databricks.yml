@@ -11,7 +11,7 @@ variables:
     default: 13.3.x-scala2.12
   node_type_id:
     description: The cluster's node type ID.
-    default: m4.large
+    default: m5d.large
 
 artifacts:
   dabdemo-wheel:
