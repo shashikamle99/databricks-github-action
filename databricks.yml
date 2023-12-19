@@ -5,13 +5,13 @@ bundle:
 variables:
   job_prefix:
     description: A unifying prefix for this bundle's job and task names.
-    default: jenkins-demo
+    default: sk
   spark_version:
     description: The cluster's Spark version ID.
     default: 13.3.x-scala2.12
   node_type_id:
     description: The cluster's node type ID.
-    default: i3.xlarge
+    default: t2.medium
 
 artifacts:
   dabdemo-wheel:
@@ -72,4 +72,4 @@ targets:
   dev:
     mode: development
     workspace:
-      host: https://dbc-71df4835-367f.cloud.databricks.com
+      host: https://dbc-ec034fd0-e9b9.cloud.databricks.com
