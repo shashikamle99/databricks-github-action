@@ -1,7 +1,7 @@
 // Filename: Jenkinsfile
 node {
   def GITREPOREMOTE = "https://github.com/shashikamle99/databrickscicd.git"
-  def GITBRANCH     = "main"
+  def GITBRANCH     = "master"
   def DBCLIPATH     = "/usr/local/bin/"
   def JQPATH        = "/usr/bin/"
   def JOBPREFIX     = "databricks-demo"
