@@ -1,10 +1,10 @@
 // Filename: Jenkinsfile
 node {
-  def GITREPOREMOTE = "https://github.com/praveen9177496079/databricks.git"
+  def GITREPOREMOTE = "https://github.com/shashikamle99/databrickscicd.git"
   def GITBRANCH     = "main"
   def DBCLIPATH     = "/usr/local/bin/"
   def JQPATH        = "/usr/bin/"
-  def JOBPREFIX     = "jenkins-demo"
+  def JOBPREFIX     = "databricks-demo"
   def BUNDLETARGET  = "dev"
 
   stage('Checkout') {
