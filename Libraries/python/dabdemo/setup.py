@@ -7,7 +7,7 @@ setup(
   name = "dabdemo",
   version = dabdemo.__version__,
   author = dabdemo.__author__,
-  url = "https://dbc-71df4835-367f.cloud.databricks.com",
+  url = "https://dbc-ec034fd0-e9b9.cloud.databricks.com",
   author_email = "<my-author-name>@<my-organization>",
   description = "<my-package-description>",
   packages = find_packages(include = ["dabdemo"]),
