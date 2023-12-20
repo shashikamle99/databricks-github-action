@@ -39,6 +39,8 @@ node {
     def DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH
     def getPath = "${DBCLIPATH}/databricks bundle validate -t ${BUNDLETARGET} | ${JQPATH}/jq -r .workspace.file_path"
     def output = sh(script: getPath, returnStdout: true).trim()
+    echo "${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}"
+    echo "${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}"
 
     if (output) {
       DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH = "${output}"
@@ -48,8 +50,8 @@ node {
 
     sh """#!/bin/bash
           ${DBCLIPATH}/databricks workspace export-dir \
-          ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}/Validation/reports/junit/test-reports \
-          ${WORKSPACE}/Validation/reports/junit/test-reports \
+          ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}/Validation/Output/test-results \
+          ${WORKSPACE}/Validation/Output/test-reports \
           -t ${BUNDLETARGET} \
           --overwrite
        """
