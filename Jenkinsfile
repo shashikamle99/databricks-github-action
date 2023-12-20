@@ -2,8 +2,8 @@
 node {
   def GITREPOREMOTE = "https://github.com/shashikamle99/databrickscicd.git"
   def GITBRANCH     = "master"
-  def DBCLIPATH     = "/usr/local/bin/"
-  def JQPATH        = "/usr/bin/"
+  def DBCLIPATH     = "/usr/local/bin"
+  def JQPATH        = "/usr/bin"
   def JOBPREFIX     = "databricks-demo"
   def BUNDLETARGET  = "dev"
 
@@ -48,8 +48,8 @@ node {
 
     sh """#!/bin/bash
           ${DBCLIPATH}/databricks workspace export-dir \
-          ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}/Validation/Output/test-results \
-          ${WORKSPACE}/Validation/Output/test-results \
+          ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}/Validation/reports/junit/test-reports \
+          ${WORKSPACE}/Validation/reports/junit/test-reports \
           -t ${BUNDLETARGET} \
           --overwrite
        """
